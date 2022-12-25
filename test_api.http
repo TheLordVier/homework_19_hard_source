@@ -1,0 +1,127 @@
+POST http://127.0.0.1:5000/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "username": "alex",
+    "password": "P@ssw0rdWOW"
+}
+
+###
+
+PUT http://127.0.0.1:5000/auth/
+Accept: application/json
+Content-Type: application/json
+
+{
+"refresh_token": "JWT_REFRESH_TOKEN"
+}
+
+###
+
+GET http://127.0.0.1:5000/movies/
+Accept: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+###
+
+GET http://127.0.0.1:5000/movies/?director_id=12
+Accept: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+###
+
+GET http://127.0.0.1:5000/movies/?genre_id=4
+Accept: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+###
+
+GET http://127.0.0.1:5000/movies/?year=2010
+Accept: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+###
+
+GET http://127.0.0.1:5000/directors/
+Accept: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+###
+
+GET http://127.0.0.1:5000/directors/1
+Accept: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+###
+
+GET http://127.0.0.1:5000/genres/
+Accept: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+###
+
+GET http://127.0.0.1:5000/genres/1
+Accept: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+###
+
+GET http://127.0.0.1:5000/movies/21
+Accept: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+###
+
+POST http://127.0.0.1:5000/movies/
+Accept: application/json
+Content-Type: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+{
+  "title": "Гарри Поттер мой кумир!",
+  "trailer": "таким фильмам не нужны трейлеры",
+  "year": 1990,
+  "rating": 10,
+  "description": "10 из 10!"
+}
+
+###
+
+PUT http://127.0.0.1:5000/movies/21
+Accept: application/json
+Content-Type: application/json
+Authorization: Here put Token (access_token or refresh_token)
+
+{
+  "id": 21,
+  "title": "-------",
+  "trailer": "-----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+PATCH http://127.0.0.1:5000/movies/3
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 21,
+  "title": "-------",
+  "trailer": "-----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+DELETE http://127.0.0.1:5000/movies/21
+Authorization: Here put Token (access_token or refresh_token)
